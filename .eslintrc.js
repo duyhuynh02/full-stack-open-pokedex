@@ -18,32 +18,22 @@ module.exports = {
   "plugins": [
     "react", "jest"
   ],
-  "rules": {
-    "indent": [
-      "error",
+  'rules': {
+    '@stylistic/js/indent': [
+        'error',
         2
-      ],
-    "linebreak-style": [
-      "error",
-      "unix"
     ],
-    "quotes": [
-      "error",
-      "single"
+    '@stylistic/js/linebreak-style': [
+        'error',
+        'unix'
     ],
-    "semi": [
-      "error",
-      "never"
+    '@stylistic/js/quotes': [
+        'error',
+        'single'
     ],
-    "eqeqeq": "error",
-    "no-trailing-spaces": "error",
-    "object-curly-spacing": [
-      "error", "always"
+    '@stylistic/js/semi': [
+        'error',
+        'never'
     ],
-    "arrow-spacing": [
-      "error", { "before": true, "after": true }
-    ],
-    "no-console": "error",
-    "react/prop-types": 0
-  }
+}
 }
