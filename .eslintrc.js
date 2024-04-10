@@ -16,7 +16,8 @@ module.exports = {
     "sourceType": "module"
   },
   "plugins": [
-    '@stylistic/js'
+    '@stylistic/js',
+    ["jest"]
   ],
   "rules": {
     "eqeqeq": "error",
