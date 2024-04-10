@@ -1,3 +1,4 @@
+/* eslint-disable @stylistic/js/linebreak-style */
 import React from 'react'
 
 const PokemonAbility = ({ abilityName }) => (
