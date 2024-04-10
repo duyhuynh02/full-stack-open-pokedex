@@ -16,12 +16,22 @@ module.exports = {
     "sourceType": "module"
   },
   "plugins": [
-    "react", "jest"
+    '@stylistic/js'
   ],
-  'rules': {
+  "rules": {
+    "eqeqeq": "error",
+    "no-trailing-spaces": "error",
+    "object-curly-spacing": [
+      "error", "always"
+    ],
+    "arrow-spacing": [
+      "error", { "before": true, "after": true }
+    ],
+    "no-console": "error",
+    "react/prop-types": 0,
     '@stylistic/js/indent': [
-        'error',
-        2
+      'error',
+      2
     ],
     '@stylistic/js/linebreak-style': [
         'error',
@@ -35,5 +45,5 @@ module.exports = {
         'error',
         'never'
     ],
-}
+  },
 }
