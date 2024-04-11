@@ -43,6 +43,9 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    allowedHosts: [
+      '.onrender.com'
+    ]
   },
   plugins: [
     new HtmlWebPackPlugin({
