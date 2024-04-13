@@ -47,14 +47,14 @@ jobs:
         
       - name: Deployed Success
         uses: rjstone/discord-webhook-notify@v1.0.4
-        if: ${{ success() }}
+        if: success()
         with:
             details: Deployed Succeeded!
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
       - name: Deployed Failure
         uses: rjstone/discord-webhook-notify@v1.0.4
-        if: ${{ failure() }}
+        if: failure()
         with:
             details: Deployed failed! 
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
