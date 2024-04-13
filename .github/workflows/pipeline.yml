@@ -42,6 +42,14 @@ jobs:
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-20.04
     steps:
+    - name: Check if MY_SECRET exists
+      run: |
+        if [ `echo ${{secrets.DISCORD_WEBHOOK}} | wc -c` -lt 2 ]; then
+          echo "The secret \"DISCORD_WEBHOOK\" has not been set."
+          echo "Please go to \"Settings > Secrets > Actions\" to create it."
+          exit 1
+        fi
+        
       - name: Discord Webhook Notify
         uses: rjstone/discord-webhook-notify@v1.0.4
         
