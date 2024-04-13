@@ -10,7 +10,7 @@ on:
 jobs:
   a_test_job:
     runs-on: ubuntu-20.04
-    if: ${{ github.event_name == 'push' || !contains(join(github.event.head_commit.message, ' '), "skip") }}
+    if: ${{ github.event_name == 'push' && !contains(join(github.event.head_commit.message, ' '), "skip") }}
     steps:
       - uses: actions/checkout@v4
       - name: github context
