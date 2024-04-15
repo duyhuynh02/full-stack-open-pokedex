@@ -57,16 +57,7 @@ jobs:
             details: Deployed failed! 
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
-  health_check:
-    needs: [simple_deployment_pipeline]
-    runs-on: ubuntu-20.04 
-    steps:
-      - name: URL Health Check
-        uses: Jtalk/url-health-check-action@v4
-        with:
-          url: https://full-stack-open-pokedex-nb6k.onrender.com/
-          max-attempts: 3 
-          rery-delay: 5s 
+
   
 
 
